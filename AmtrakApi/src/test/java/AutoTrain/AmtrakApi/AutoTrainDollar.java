@@ -19,7 +19,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 @SuppressWarnings("unused")
-public class AutoTrainCreateCart {
+public class AutoTrainDollar {
 
 	static Properties prop = new Properties();
 
@@ -40,7 +40,7 @@ public class AutoTrainCreateCart {
 		Response res = given().header("Content-Type", "application/json").header("request-id", "AMT1234")
 				.header("client_id", "78ae45f2d97449d18fc05bce1e0592fe")
 				.header("client_secret", "03Dd272F7805412C9d395c6322cDb8CF").
-				body(ResusableFunctions.getPostDataCartID()).  
+				body(ResusableFunctions.getPostDataCartIDDollars()).  
 				when().post("/cart").
 				then().assertThat().statusCode(200).and().contentType(ContentType.JSON).			
 				extract().response();
